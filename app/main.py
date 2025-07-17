@@ -34,3 +34,5 @@ def update_password(password_id: int, entry: models.PasswordEntryCreate, db: Ses
 @app.delete("/passwords/{password_id}")
 def delete_password(password_id: int, db: Session = Depends(get_db)):
     return crud.delete_password(db, password_id)
+
+# Tento riadok je len na otestovanie CI pipeline
